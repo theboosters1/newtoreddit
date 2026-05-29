@@ -1,0 +1,704 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+@layer utilities {
+  .animate-shake {
+    animation: shake 0.4s ease-in-out;
+  }
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-4px); }
+  75% { transform: translateX(4px); }
+}
+
+/* =========================================
+   Light Theme Style Overrides
+   ========================================= */
+.light {
+  background-color: #fcfcfd !important;
+  color: #18181b !important;
+}
+
+/* Header & Nav */
+.light #navbar-header {
+  background-color: rgba(252, 252, 253, 0.9) !important;
+  border-color: #e4e4e7 !important;
+}
+
+.light #navbar-header .text-white,
+.light #navbar-header .text-zinc-100 {
+  color: #09090b !important;
+}
+
+.light #navbar-header button {
+  color: #3f3f46 !important;
+}
+
+.light #navbar-header button:hover {
+  color: #09090b !important;
+}
+
+/* Theme toggle button specific light style */
+.light #theme-toggle {
+  background-color: #f4f4f5 !important;
+  border-color: #e4e4e7 !important;
+  color: #18181b !important;
+}
+
+.light #theme-toggle:hover {
+  background-color: #e4e4e7 !important;
+}
+
+/* Hero Section */
+.light #hero-section {
+  background-color: #fbfbfb !important;
+  border-color: #e4e4e7 !important;
+}
+
+.light #hero-section h1 {
+  color: #09090b !important;
+}
+
+.light #hero-section p {
+  color: #3f3f46 !important;
+}
+
+.light #hero-section .bg-zinc-900 {
+  background-color: #ffffff !important;
+  border-color: #e4e4e7 !important;
+  color: #18181b !important;
+}
+
+/* Trust Pilot Mimic Badge under light mode */
+.light #hero-trust-badge {
+  background-color: #f4f4f5 !important;
+  border-color: #e4e4e7 !important;
+}
+
+.light #hero-trust-rating {
+  color: #09090b !important;
+}
+
+.light #hero-trust-count {
+  color: #27272a !important;
+}
+
+.light #hero-trust-divider-1,
+.light #hero-trust-divider-2 {
+  color: #d4d4d8 !important;
+}
+
+.light .text-zinc-350,
+.light .text-zinc-450,
+.light .text-zinc-300 {
+  color: #27272a !important;
+}
+
+/* Roadmap Guide info card components */
+.light #how-it-works-guide h3 {
+  color: #27272a !important;
+}
+
+.light #how-it-works-guide p {
+  color: #52525b !important;
+}
+
+.light #how-it-works-guide h4 {
+  color: #09090b !important;
+}
+
+.light #how-it-works-guide .bg-zinc-900\/60 {
+  background-color: #ffffff !important;
+  border-color: #e4e4e7 !important;
+}
+
+.light #how-it-works-guide .bg-zinc-900\/60 p {
+  color: #52525b !important;
+}
+
+.light #how-it-works-guide .bg-zinc-900\/60 .text-zinc-300 {
+  color: #27272a !important;
+}
+
+.light #how-it-works-guide .bg-zinc-900\/60:hover {
+  border-color: #ea580c !important;
+  background-color: #fffaf0 !important;
+}
+
+/* Pricing container */
+.light #pricing {
+  background-color: #f4f4f5 !important;
+  border-color: #e4e4e7 !important;
+}
+
+.light #pricing h2 {
+  color: #09090b !important;
+}
+
+.light #pricing p {
+  color: #3f3f46 !important;
+}
+
+/* Switch tab controller */
+.light #pricing .bg-zinc-950 {
+  background-color: #e4e4e7 !important;
+  border-color: #d4d4d8 !important;
+}
+
+.light #pricing .bg-zinc-950 button {
+  color: #52525b !important;
+}
+
+.light #pricing .bg-zinc-950 button.bg-zinc-900 {
+  background-color: #ffffff !important;
+  border-color: #d4d4d8 !important;
+  color: #18181b !important;
+}
+
+/* Interactive custom karma block builder card */
+.light #custom-karma-builder-container {
+  background-color: #ffffff !important;
+  border-color: #ffedd5 !important;
+}
+
+.light #custom-karma-builder-container h3,
+.light #custom-karma-builder-container h4 {
+  color: #09090b !important;
+}
+
+.light #custom-karma-builder-container label {
+  color: #18181b !important;
+}
+
+.light #custom-karma-builder-container .bg-zinc-950 {
+  background-color: #f4f4f5 !important;
+  border-color: #e4e4e7 !important;
+}
+
+.light #custom-karma-builder-container input[type="number"] {
+  background-color: #ffffff !important;
+  border-color: #d4d4d8 !important;
+  color: #18181b !important;
+}
+
+.light #custom-karma-builder-container input[type="number"]:focus {
+  border-color: #ea580c !important;
+}
+
+.light #custom-karma-builder-container input[type="range"] {
+  background-color: #e4e4e7 !important;
+}
+
+.light #custom-karma-builder-container .bg-zinc-950 button {
+  color: #3f3f46 !important;
+}
+
+.light #custom-karma-builder-container .bg-zinc-950 button.bg-zinc-900 {
+  background-color: #ffffff !important;
+  border-color: #e4e4e7 !important;
+  color: #18181b !important;
+}
+
+.light #pricing-promo-tag {
+  background-color: #fff7ed !important;
+  border-color: #ffd8a8 !important;
+}
+
+.light #pricing-promo-icon {
+  color: #ea580c !important;
+}
+
+.light #pricing-promo-label {
+  color: #c2410c !important;
+}
+
+.light #pricing-promo-value {
+  color: #9a3412 !important;
+}
+
+.light #custom-karma-builder-container .bg-zinc-950.border-zinc-900 {
+  background-color: #fbfbfb !important;
+  border-color: #e4e4e7 !important;
+}
+
+.light #custom-karma-builder-container .bg-zinc-950.border-zinc-900 span.text-white {
+  color: #09090b !important;
+}
+
+.light #custom-karma-builder-container .bg-zinc-950.border-zinc-900 div.text-white {
+  color: #09090b !important;
+}
+
+.light #custom-karma-builder-container .bg-zinc-950.border-zinc-900 .bg-zinc-900 {
+  background-color: #f4f4f5 !important;
+  border-color: #e4e4e7 !important;
+  color: #18181b !important;
+}
+
+.light #custom-karma-builder-container .bg-zinc-950.border-zinc-900 .text-zinc-400 {
+  color: #52525b !important;
+}
+
+/* Reddit target username inputs and labels styling in light mode */
+.light #custom-karma-builder-container .bg-zinc-950\/40 {
+  background-color: #fbfbfb !important;
+  border-color: #e4e4e7 !important;
+}
+
+.light #custom-karma-builder-container .text-zinc-200 {
+  color: #18181b !important;
+}
+
+.light #custom-karma-builder-container .text-zinc-400 {
+  color: #52525b !important;
+}
+
+.light #custom-karma-builder-container input[type="text"] {
+  background-color: #ffffff !important;
+  border-color: #d4d4d8 !important;
+  color: #18181b !important;
+}
+
+.light #custom-karma-builder-container input[type="text"]::placeholder {
+  color: #a1a1aa !important;
+}
+
+.light #custom-karma-builder-container .relative span.text-zinc-400 {
+  color: #71717a !important;
+}
+
+/* Secure seal card */
+.light .max-w-2xl.mx-auto.bg-zinc-900\/40 {
+  background-color: #ffffff !important;
+  border-color: #e4e4e7 !important;
+}
+
+.light .max-w-2xl.mx-auto.bg-zinc-900\/40 h4 {
+  color: #09090b !important;
+}
+
+.light .max-w-2xl.mx-auto.bg-zinc-900\/40 p {
+  color: #52525b !important;
+}
+
+.light .max-w-2xl.mx-auto.bg-zinc-900\/40 .bg-zinc-950 {
+  background-color: #f4f4f5 !important;
+  border-color: #e4e4e7 !important;
+  color: #3f3f46 !important;
+}
+
+/* Reviews Panel */
+.light #reviews {
+  background-color: #ffffff !important;
+  border-color: #e4e4e7 !important;
+}
+
+.light #reviews h2 {
+  color: #09090b !important;
+}
+
+.light #reviews p {
+  color: #3f3f46 !important;
+}
+
+.light #reviews [id^="review-card-"] {
+  background-color: #f9fafb !important;
+  border-color: #e4e4e7 !important;
+}
+
+.light #reviews [id^="review-card-"]:hover {
+  border-color: #ea580c !important;
+  background-color: #ffffff !important;
+}
+
+.light #reviews [id^="review-card-"] p {
+  color: #1c1917 !important;
+}
+
+.light #reviews [id^="review-card-"] .border-t {
+  border-color: #e4e4e7 !important;
+}
+
+.light #reviews [id^="review-card-"] h4,
+.light #reviews [id^="review-card-"] h4 span {
+  color: #09090b !important;
+}
+
+.light #reviews [id^="review-card-"] svg {
+  color: #ea580c !important; /* rating stars */
+  fill: #ea580c !important;
+}
+
+.light #reviews [id^="review-card-"] .text-orange-400 {
+  color: #ea580c !important; /* user role */
+}
+
+.light #reviews [id^="review-card-"] img {
+  border-color: #e4e4e7 !important;
+}
+
+/* FAQs Panel */
+.light #faqs {
+  background-color: #f4f4f5 !important;
+  border-color: #e4e4e7 !important;
+}
+
+.light #faqs h2 {
+  color: #09090b !important;
+}
+
+.light #faqs p {
+  color: #3f3f46 !important;
+}
+
+.light #faqs [id^="faq-item-"] {
+  background-color: #ffffff !important;
+  border-color: #e4e4e7 !important;
+}
+
+.light #faqs [id^="faq-item-"] button span {
+  color: #09090b !important;
+}
+
+.light #faqs [id^="faq-item-"] button span.text-white {
+  color: #09090b !important;
+}
+
+.light #faqs [id^="faq-item-"] button span.bg-zinc-950 {
+  background-color: #f4f4f5 !important;
+  color: #71717a !important;
+}
+
+.light #faqs [id^="faq-item-"] .border-t {
+  border-color: #e4e4e7 !important;
+  background-color: #fbfbfa !important;
+}
+
+.light #faqs [id^="faq-item-"] p {
+  color: #27272a !important;
+}
+
+.light #faqs [id^="faq-item-"] .text-zinc-300 {
+  color: #18181b !important;
+}
+
+.light #faqs [id^="faq-item-"] .border-l {
+  border-color: #e4e4e7 !important;
+}
+
+.light #faqs [id^="faq-item-"] .border-l span {
+  color: #4b5563 !important;
+}
+
+.light #faqs .bg-gradient-to-r {
+  background: #ffffff !important;
+  border-color: #e4e4e7 !important;
+}
+
+.light #faqs .bg-gradient-to-r h4 {
+  color: #09090b !important;
+}
+
+.light #faqs .bg-gradient-to-r p {
+  color: #52525b !important;
+}
+
+/* Footer Section Overrides */
+.light #footer {
+  background-color: #fcfcfd !important;
+  border-color: #e4e4e7 !important;
+}
+
+.light #footer p,
+.light #footer div {
+  color: #52525b !important;
+}
+
+.light #footer h3 {
+  color: #09090b !important;
+}
+
+.light #footer button {
+  color: #3f3f46 !important;
+}
+
+.light #footer button:hover {
+  color: #09090b !important;
+}
+
+.light #footer-brand-title {
+  color: #09090b !important;
+}
+
+/* Dialog Overlay */
+.light [role="dialog"],
+.light .fixed.inset-0 {
+  color: #1c1917 !important;
+}
+
+.light [role="dialog"] .bg-zinc-950 {
+  background-color: #ffffff !important;
+  border-color: #e4e4e7 !important;
+}
+
+.light [role="dialog"] .text-white,
+.light [role="dialog"] .text-zinc-100 {
+  color: #09090b !important;
+}
+
+.light [role="dialog"] .text-zinc-400 {
+  color: #52525b !important;
+}
+
+.light [role="dialog"] .text-zinc-300 {
+  color: #27272a !important;
+}
+
+.light [role="dialog"] .border-zinc-900,
+.light [role="dialog"] .border-zinc-850 {
+  border-color: #e4e4e7 !important;
+}
+
+.light [role="dialog"] input,
+.light [role="dialog"] select {
+  background-color: #ffffff !important;
+  border-color: #d4d4d8 !important;
+  color: #09090b !important;
+}
+
+/* Live alert panel toast layout */
+.light #recent-order-alert-panel .bg-orange-655\/10,
+.light #recent-order-alert-panel .bg-orange-650\/10 {
+  background-color: #fff7ed !important;
+  border-color: #ffd8a8 !important;
+}
+
+.light #recent-order-alert-panel span.text-white {
+  color: #09090b !important;
+}
+
+.light #recent-order-alert-panel .text-orange-400 {
+  color: #c2410c !important;
+}
+
+.light #recent-order-alert-panel code {
+  background-color: #ffffff !important;
+  border-color: #e4e4e7 !important;
+  color: #09090b !important;
+}
+
+/* WhatsApp Support Floating Panel overrides */
+.light #wa-chat-panel {
+  background-color: #ffffff !important;
+  border-color: #e4e4e7 !important;
+}
+
+.light #wa-active-badge {
+  border-color: #ffffff !important;
+}
+
+.light #wa-chat-board {
+  background-color: #f0f2f5 !important;
+}
+
+.light #wa-chat-bubble {
+  background-color: #ffffff !important;
+  border-color: #e4e4e7 !important;
+  color: #1f2937 !important;
+}
+
+.light #wa-chat-footer {
+  background-color: #f0f2f5 !important;
+  border-color: #e4e4e7 !important;
+}
+
+.light #wa-text-input-query {
+  background-color: #ffffff !important;
+  border-color: #d4d4d8 !important;
+  color: #111827 !important;
+}
+
+.light #wa-text-input-query::placeholder {
+  color: #9ca3af !important;
+}
+
+.light #wa-fab-trigger span {
+  border-color: #fcfcfd !important;
+}
+
+/* =========================================
+   Free Vouch Component Animations
+   ========================================= */
+
+/* Idle Tab Button: Gentle Attention Grabber with soft glow indicator */
+.animate-vouch-idle {
+  animation: vouch-idle-pulse 2.5s infinite ease-in-out;
+  border: 1px dashed rgba(249, 115, 22, 0.45) !important;
+  background-color: rgba(249, 115, 22, 0.05) !important;
+  color: #f97316 !important;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.light .animate-vouch-idle {
+  border: 1px dashed rgba(234, 88, 12, 0.55) !important;
+  background-color: rgba(234, 88, 12, 0.06) !important;
+  color: #ea580c !important;
+}
+
+/* Active Tab Button: Radiant Orange Core Wave and premium depth font-styling */
+.animate-vouch-active {
+  animation: vouch-active-pulse 2.2s infinite ease-in-out;
+  border-color: rgba(249, 115, 22, 0.75) !important;
+  text-shadow: 0 0 10px rgba(249, 115, 22, 0.35);
+}
+
+.light .animate-vouch-active {
+  background-color: #fff7ed !important;
+  border-color: #f97316 !important;
+  color: #c2410c !important;
+}
+
+/* Free Vouch Badge: Ultra Modern Micro Pulse */
+.animate-vouch-badge-glow {
+  animation: vouch-badge-pulse 1.8s infinite alternate ease-in-out;
+}
+
+/* Claim free button pulsing with a powerful glowing magnet pull */
+.animate-vouch-btn-pulse {
+  animation: vouch-btn-pulse 1.8s infinite ease-in-out;
+}
+
+/* Automatic gentle wiggle helper to catch peripheral vision organically every 4s */
+.animate-vouch-emoji-wiggle {
+  display: inline-block;
+  transform-origin: bottom center;
+  animation: emoji-auto-wiggle 4s infinite ease-in-out;
+}
+
+/* Shimmer sweep animation */
+.animate-vouch-shimmer {
+  animation: vouch-shimmer-sweep 3.5s infinite linear;
+}
+
+/* Gift emoji jitter animation on hover of tab */
+#vouch-tab-btn:hover .vouch-gift-emoji {
+  display: inline-block;
+  animation: emoji-jitter 0.6s infinite ease-in-out;
+}
+
+/* Gift emoji jitter on CTA hover */
+#claim-free-vouch-btn:hover .vouch-gift-emoji-btn {
+  display: inline-block;
+  animation: emoji-jitter 0.6s infinite ease-in-out;
+}
+
+/* Keyframes Definitions */
+@keyframes vouch-shimmer-sweep {
+  0% { transform: translateX(-100%) skewX(-15deg); }
+  35%, 100% { transform: translateX(250%) skewX(-15deg); }
+}
+
+@keyframes emoji-auto-wiggle {
+  0%, 75%, 100% { transform: scale(1) rotate(0deg); }
+  80% { transform: scale(1.3) rotate(-14deg); }
+  85% { transform: scale(1.3) rotate(14deg); }
+  90% { transform: scale(1.3) rotate(-14deg); }
+  95% { transform: scale(1.3) rotate(14deg); }
+}
+
+@keyframes vouch-idle-pulse {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(249, 115, 22, 0);
+  }
+  50% {
+    transform: scale(1.035);
+    box-shadow: 0 0 16px 2px rgba(249, 115, 22, 0.28);
+    border-color: rgba(249, 115, 22, 0.7) !important;
+    background-color: rgba(249, 115, 22, 0.1) !important;
+  }
+}
+
+@keyframes vouch-active-pulse {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(249, 115, 22, 0.15), inset 0 0 6px rgba(249, 115, 22, 0.05);
+  }
+  50% {
+    transform: scale(1.02);
+    box-shadow: 0 0 20px 6px rgba(249, 115, 22, 0.38), inset 0 0 12px rgba(249, 115, 22, 0.15);
+    border-color: rgba(249, 115, 22, 1) !important;
+  }
+}
+
+@keyframes vouch-badge-pulse {
+  0% {
+    transform: scale(1);
+    background-color: rgba(249, 115, 22, 0.1);
+    box-shadow: 0 0 0 0 rgba(249, 115, 22, 0);
+  }
+  100% {
+    transform: scale(1.08);
+    background-color: rgba(249, 115, 22, 0.25);
+    box-shadow: 0 0 12px 2px rgba(249, 115, 22, 0.35);
+  }
+}
+
+@keyframes vouch-btn-pulse {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 4px 12px rgba(234, 88, 12, 0.25);
+  }
+  50% {
+    transform: scale(1.04);
+    box-shadow: 0 8px 24px rgba(234, 88, 12, 0.55), 0 0 20px rgba(249, 115, 22, 0.45);
+  }
+}
+
+@keyframes emoji-jitter {
+  0%, 100% { transform: scale(1) rotate(0deg); }
+  25% { transform: scale(1.25) rotate(-12deg); }
+  75% { transform: scale(1.25) rotate(12deg); }
+}
+
+/* =========================================
+   Get Karma Now Header Button Glow Animation
+   ========================================= */
+.animate-get-karma-btn-glow {
+  animation: get-karma-btn-glow-pulse 2.2s infinite ease-in-out;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.animate-get-karma-btn-glow:hover {
+  transform: scale(1.07) !important;
+}
+
+@keyframes get-karma-btn-glow-pulse {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 4px 10px rgba(234, 88, 12, 0.22);
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 8px 22px rgba(234, 88, 12, 0.55), 0 0 15px rgba(245, 158, 11, 0.35);
+  }
+}
+
+/* Guarantee Submit / Campaign Build Button and Claim Free Vouch Button texts are white in all states and themes */
+#pricing #boost-campaign-btn,
+#pricing #claim-free-vouch-btn,
+.light #pricing .bg-zinc-950 #boost-campaign-btn,
+.light #pricing .bg-zinc-950 #claim-free-vouch-btn,
+.light #boost-campaign-btn,
+.light #claim-free-vouch-btn {
+  color: #ffffff !important;
+}
+
+
